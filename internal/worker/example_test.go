@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ankorstore/yokai-worker-template/internal"
+	"github.com/1ch0/yokai-demo/internal"
 	"github.com/ankorstore/yokai/log/logtest"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/testutil"
