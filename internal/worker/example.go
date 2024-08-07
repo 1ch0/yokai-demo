@@ -22,7 +22,7 @@ func NewExampleWorker(config *config.Config) *ExampleWorker {
 
 // Name returns the [ExampleWorker] name.
 func (w *ExampleWorker) Name() string {
-	return "example-worker"
+	return "sync-cmdb"
 }
 
 // Run executes the [ExampleWorker].
@@ -36,10 +36,10 @@ func (w *ExampleWorker) Run(ctx context.Context) error {
 
 			return nil
 		default:
-			logger.Info().Msg("running")
+			logger.Info().Msg(w.config.GetString("config.test.name"))
 
 			// The sleep interval can be configured in the application config files.
-			time.Sleep(time.Duration(w.config.GetFloat64("config.example-worker.interval")) * time.Second)
+			time.Sleep(time.Duration(w.config.GetFloat64("config.sync-cmdb.interval")) * time.Second)
 		}
 	}
 }

@@ -51,6 +51,6 @@ modules:
         enabled: true
 config:
   sync-cmdb:
-    interval: 3
+    interval: 5
   test:
-    name: test
+    name: you
